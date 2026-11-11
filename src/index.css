@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold-glow: rgba(255, 215, 0, 0.45);
+    --gold-bright: #FFE885;
+    --gold-mid: #FFB800;
+    --gold-deep: #A36A00;
+    --maroon-dark: #1f0718;
+    --maroon-deep: #380d2a;
+    --maroon-card: #2b0b23;
+  }
+
+  body {
+    font-family: 'Outfit', 'Noto Sans Gujarati', system-ui, sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-gujarati {
+  font-family: 'Noto Sans Gujarati', 'Outfit', sans-serif;
+}
+
+.font-rozha {
+  font-family: 'Rozha One', 'Cinzel', serif;
+}
+
+/* Royal Gold Filigree Box */
+.royal-gold-border {
+  border: 1.5px solid #FFD700;
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.35), inset 0 0 12px rgba(255, 215, 0, 0.12);
+}
+
+.royal-gold-border-sm {
+  border: 1px solid rgba(255, 215, 0, 0.85);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.25);
+}
+
+/* Gold Gradient Button */
+.btn-gold-royal {
+  background: linear-gradient(180deg, #FFF099 0%, #FFB800 48%, #D47B00 100%);
+  color: #3b1700;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 0 #8f4700, 0 6px 20px rgba(255, 184, 0, 0.5);
+  transition: all 0.15s ease-out;
+}
+
+.btn-gold-royal:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #8f4700, 0 3px 12px rgba(255, 184, 0, 0.5);
+}
+
+/* Maroon Velvet Button */
+.btn-maroon-royal {
+  background: linear-gradient(180deg, #4d1033 0%, #2f0720 100%);
+  border: 1.5px solid #FFD700;
+  color: #FFDE6A;
+  box-shadow: 0 4px 0 #180310, 0 0 15px rgba(255, 215, 0, 0.3);
+  transition: all 0.15s ease-out;
+}
+
+.btn-maroon-royal:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #180310, 0 0 8px rgba(255, 215, 0, 0.3);
+}
+
+/* Golden text gradient */
+.text-gold-gradient {
+  background: linear-gradient(180deg, #FFF6B8 0%, #FFC837 45%, #D48800 85%, #FFDF73 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(218, 165, 32, 0.5));
+}
+
+.text-silver-gradient {
+  background: linear-gradient(180deg, #FFFFFF 0%, #D8E0EE 50%, #95A5BC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shimmer animation */
+@keyframes gold-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-gold-shimmer {
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0) 0%, rgba(255, 245, 180, 0.6) 50%, rgba(255, 215, 0, 0) 100%);
+  background-size: 200% 100%;
+  animation: gold-shimmer 2.4s infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.06); filter: brightness(1.18); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 1.8s ease-in-out infinite;
+}
+
+@keyframes spark-rotate {
+  0% { transform: rotate(0deg) scale(0.9); }
+  50% { transform: rotate(180deg) scale(1.15); }
+  100% { transform: rotate(360deg) scale(0.9); }
+}
+
+.animate-spark-rotate {
+  animation: spark-rotate 8s linear infinite;
+}
+
+/* Match pop animation */
+@keyframes sweet-pop {
+  0% { transform: scale(1); opacity: 1; }
+  45% { transform: scale(1.38); filter: brightness(1.8) drop-shadow(0 0 16px gold); }
+  100% { transform: scale(0); opacity: 0; }
+}
+
+.sweet-pop-active {
+  animation: sweet-pop 0.32s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(13, 6, 32, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: #B8860B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFD700;
+}

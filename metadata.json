@@ -1,0 +1,6 @@
+{
+  "name": "Laddu Crush - Premium",
+  "description": "Luxurious Indian sweets match-3 puzzle game featuring authentic laddus, royal palace progression map, explosive boosters, and VIP rewards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
