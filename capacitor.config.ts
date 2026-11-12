@@ -23,7 +23,7 @@ const config: CapacitorConfig = {
     AdMob: {
       appId: {
         // Replace with your real Google AdMob Android App ID when publishing
-        android: 'ca-app-pub-3940256099942544~3347511713',
+        android: 'ca-app-pub-7559010209576294~6378860956',
       },
     },
   },
